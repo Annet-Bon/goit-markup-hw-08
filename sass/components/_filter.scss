@@ -1,0 +1,38 @@
+.main-section{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.title {
+    display: none;
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+
+    &-btn {
+        color: $prime-text-color;
+        background-color: $third-text-color;
+        font-family: inherit;
+        padding: 6px 22px;
+        border: transparent;
+        border-radius: 4px;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.62;
+        text-align: center;
+        outline: none;
+
+        transition: all $transition-dur-timefunc;
+
+        &:hover,
+        &:focus {
+            color: $third-text-color;
+            background-color: $accent-color;
+            box-shadow: $filter-h-shadow;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 34px;
+}
+
+.filter-title {
+    display: none;
+}
+
+.allserv {
+    &-item {
+        width: 370px;
+        padding-bottom: 20px;
+        overflow: hidden;
+
+        &:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-child(-n + 3)) {
+            margin-top: 30px;
+        }
+
+        &:hover,
+        &:focus {
+            border: $allserv-item-hf-border;
+            box-sizing: border-box;
+            box-shadow: $allserv-item-hf-shadow;
+        }
+    }
+
+    &-link {
+        display: inline-block;
+        content: "";
+        position: relative;
+        overflow: hidden;
+    }
+
+    &-img {
+        overflow: hidden;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background: $allservimg-bg-before;
+            z-index: 2;
+
+            transform: translateY(100%);
+
+            transition: all $transition-dur-timefunc;
+
+            .allserv-item:hover & {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &-name {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 20px;
+        padding-left: 24px;
+
+        color: $prime-text-color;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 2;
+        letter-spacing: 0.06em;
+    }
+
+    &-type {
+        margin-top: 4px;
+        margin-bottom: 0;
+        padding-left: 24px;
+
+        color: $second-text-color;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.86;
+    }
+}
+
+.descr-item {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 63px 24px;
+
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: $third-text-color;
+    opacity: 1;
+    transform: translateY(100%);
+    z-index: 4;
+
+    transition: all $transition-dur-timefunc;
+
+    .allserv-item:hover & {
+        transform: translateY(0);
+    }
+}
+
+.name-type {
+    position: relative;
+    z-index: 5;
+    background-color: $third-text-color;
+}
