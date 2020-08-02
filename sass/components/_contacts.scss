@@ -1,5 +1,36 @@
 .cont {
     display: none;
+
+    @media screen and (min-width: $tablet) {
+        display: block;
+        margin-left: 80px;
+
+        &-mail {
+            margin-bottom: 10px;
+        }
+
+    &-mail,
+    &-num {
+        display: flex;
+        align-items: center;
+        max-height: 16px;
+
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
+
+        color: $second-text-color;
+        fill: $second-text-color;
+
+        transition: color $transition-dur-timefunc, fill $transition-dur-timefunc;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+            fill: $accent-color;
+        }
+    }
+    }
     // display: flex;
     // margin-left: auto;
 
@@ -29,12 +60,19 @@
     // }
 }
 
-// .icon-envelope {
-//     width: 16px;
-//     margin-right: 10px;
-// }
+.icon-envelope {
 
-// .icon-smartphone {
-//     width: 10px;
-//     margin-right: 10px;
-// }
+    @media screen and (min-width: $tablet) {
+        width: 16px;
+        margin-right: 10px;
+    }
+
+}
+
+.icon-smartphone {
+
+    @media screen and (min-width: $tablet) {
+        width: 10px;
+        margin-right: 10px;
+    }
+}
