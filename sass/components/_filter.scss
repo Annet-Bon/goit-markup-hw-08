@@ -1,6 +1,11 @@
 .main-section{
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 45px;
+    padding-bottom: 40px;
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 }
 
 .title {
@@ -9,13 +14,20 @@
 
 .filter {
     display: flex;
-    justify-content: center;
-    margin-left: auto;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+    }
 
     &-btn {
         color: $prime-text-color;
         background-color: $third-text-color;
         font-family: inherit;
+        margin-top: 15px;
+        margin-right: 8px;
         padding: 6px 22px;
         border: transparent;
         border-radius: 4px;
@@ -33,6 +45,10 @@
             color: $third-text-color;
             background-color: $accent-color;
             box-shadow: $filter-h-shadow;
+        }
+
+        @media screen and (min-width: $desktop) {
+            margin: 0;
         }
     }
 }
