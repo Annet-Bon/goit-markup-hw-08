@@ -6,14 +6,20 @@
 
     background-color: $footer-bg-color;
 
+    @media screen and (min-width: $desktop) {
+        text-align: left;
+    }
+
     &-mail,
     &-num {
-        // margin-top: 10px;
-        // display: inline-block;
+
+        @media screen and (min-width: $desktop) {
+            margin-top: 10px;
+            display: inline-block;
+        }
 
         color: $fourth-text-color;
-
-        // transition: color $transition-dur-timefunc;
+        transition: color $transition-dur-timefunc;
 
         &:hover,
         &:focus {
@@ -23,7 +29,6 @@
 
     &-action {
         margin-top: 60px;
-        // margin-top: 0;
         margin-bottom: 20px;
 
         color: $third-text-color;
@@ -38,8 +43,6 @@
     }
 
     &-address {
-        // width: 230px;
-        // display: flex;
         margin-top: 20px;
 
         color: $third-text-color;
@@ -47,8 +50,16 @@
         line-height: 1.71;
         letter-spacing: 0.03em;
 
+        @media screen and (min-width: $desktop) {
+            width: 230px;
+            // display: flex;
+        }
+
         & div {
-            margin-top: 10px;
+
+            @media screen and (max-width: 1199px) {
+                margin-top: 10px;
+            }
         }
     }
 }
@@ -59,9 +70,12 @@
         display: flex;
         flex-wrap: wrap;
     }
-    // display: flex;
-    // align-items: baseline;
-    // justify-content: space-between;
+
+    @media screen and (min-width: $desktop) {
+        flex-wrap: nowrap;
+        align-items: baseline;
+        justify-content: space-between;
+    }
 
     &-input {
         display: inline-block;
@@ -77,7 +91,11 @@
     @media screen and (min-width: $tablet) {
         margin-left: 74px;
     }
-    // margin-right: 69px;
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 69px;
+        margin-left: 0;
+    }
 }
 
 .second-foot {
@@ -87,13 +105,22 @@
         margin-left: 165px;
         margin-right: 74px;
     }
-    // margin-right: 94px;
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 94px;
+    }
 }
 
 .third-foot {
     @media screen and (min-width: $tablet) {
         margin-top: 60px;
         width: 100%;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-top: 0;
     }
 }
 
@@ -109,9 +136,11 @@
     &-list {
         display: flex;
         justify-content: center;
-
-        // justify-content: space-around;
         margin-top: 20px;
+
+        @media screen and (min-width: $desktop) {
+            justify-content: space-around;
+        }
     }
 
     &-item:not(:last-child) {
@@ -152,10 +181,8 @@ a.invite-social {
 .action-email {
     height: 50px;
     width: 100%;
-    // width: 354px;
     padding: 16px;
     margin-bottom: 20px;
-    // margin-right: 12px;
     color: $fourth-text-color;
 
     border: $action-border;
@@ -166,10 +193,15 @@ a.invite-social {
 
     transition: all $transition-dur-timefunc;
 
-    // &:not(:placeholder-shown) {
-    //     background-color: $footer-bg-color;
-    //     color: $fourth-text-color;
-    // }
+    &:not(:placeholder-shown) {
+        background-color: $footer-bg-color;
+        color: $fourth-text-color;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 354px;
+        margin-right: 12px;
+    }
 }
 
 .icon-iconsend {
